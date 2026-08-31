@@ -1,19 +1,246 @@
-const IMG={gold:'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85',buffalo:'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85',burger:'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85',shake:'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=900&q=85',dog:'https://images.unsplash.com/photo-1612392062631-94dd858cba88?auto=format&fit=crop&w=900&q=85'};
-const items=[
-['gold','featured','Gold Fever Chicken Cheese Fries',16,'#f5c544','SIGNATURE','Shredded cheese, ranch, bacon & green onions.','gold'],['buffalo','featured','Buffalo Chicken Cheese Fries',16,'#ef3542','FAN FAVORITE','Shredded cheese, ranch, bacon & green onions.','buffalo'],['chopped','featured','Chopped Cheese',15,'#13c7f3','MOST ORDERED','Beef, cheese, peppers, onions, lettuce, tomato, ketchup & mayo.','burger'],['baconburger','featured','Bacon Cheeseburger',15,'#ff7024','CLASSIC','Served with french fries.','burger'],['macburger','featured','Mac N Cheeseburger',15,'#8171d8','GO BIG','Cheeseburger topped with mac n cheese.','burger'],['fruity','featured','Fruity Pebble Shake',7,'#39d36c','SWEET KORNER','A bright cereal shake.','shake'],
-['steamed','dogs','Steamed Dog',2,'#13c7f3','START HERE','Steamed hot dog. Add toppings and make it yours.','dog'],['grilled','dogs','Grilled Dog',2.5,'#ff7024','POPULAR','Customizable grilled dog.','dog'],['beef','dogs','All Beef',2.5,'#f5c544','CLASSIC','Beef hot dog with your choice of toppings.','dog'],['vegan','dogs','Vegan Dog',4,'#39d36c','VEGAN','Vegan dog with your choice of toppings.','dog'],['ling','dogs','Linguica Dog',3.25,'#ef3542','LOCAL','Savory linguica served on a hot dog bun.','dog'],['coney','dogs','Coney Island Dog',3.5,'#f5c544','BEST SELLER','Coney island sauce, mustard & onions.','dog'],['azdog','dogs','Azorean Dog',3,'#39d36c','SIGNATURE','Relish, onions, ketchup, mustard, mayo, hot sauce & potato sticks.','dog'],['macdog','dogs','Mac N Cheese Dog',3,'#8171d8','LOADED','Topped with mac n cheese.','dog'],['pizza','dogs','Pizza Dog',3,'#ef3542','FUN ONE','Pizza sauce and pizza cheese.','dog'],['neweng','dogs','New England Dog',3.5,'#2d8fe8','LOCAL','Baked beans & bacon.','dog'],['buffdog','dogs','Buffalo Dog',3,'#ef3542','SPICY','Hot sauce & blue cheese crumble.','dog'],
-['gold2','fries','Gold Fever Chicken Cheese Fries',16,'#f5c544','SIGNATURE','Shredded cheese, ranch, bacon & green onions.','gold'],['buff2','fries','Buffalo Chicken Cheese Fries',16,'#ef3542','FAN FAVORITE','Shredded cheese, ranch, bacon & green onions.','buffalo'],['bbq','fries','BBQ Chicken Cheese Fries',16,'#ff7024','SMOKY','Shredded cheese, ranch, bacon & green onions.','gold'],['sweet','fries','Sweet Chili Chicken Cheese Fries',16,'#f5c544','SWEET + HEAT','Shredded cheese, ranch, bacon & green onions.','gold'],['cacoila','fries','Loaded Cacoila Fries',16,'#39d36c','LOCAL FLAVOR','Shredded cheese, ketchup, mayo and potato sticks.','gold'],['garlic','fries','Garlic Parmesan Chicken Cheese Fries',15,'#8171d8','NEW','Shredded cheese, garlic Parmesan sauce, bacon & green onions.','gold'],['taco','fries','Loaded Taco Fries',15,'#2d8fe8','MESSY GOOD','Ground beef, shredded cheese, lettuce, tomato & sour cream.','gold'],
-['byob','burgers','Build Your Own Burger',14,'#13c7f3','MAKE IT YOURS','Add toppings at no charge. Add bacon for an additional charge.','burger'],['baconb','burgers','Bacon Cheeseburger',15,'#ff7024','CLASSIC','Served with french fries.','burger'],['texas','burgers','Texas Burger',16,'#f5c544','BIG FLAVOR','BBQ sauce, bacon and crunchy onions. Served with fries.','burger'],['azburger','burgers','Azorean Burger',15,'#39d36c','SIGNATURE','Cheese, ketchup, mustard, relish, onions, mayo, hot sauce & potato sticks.','burger'],['macb','burgers','Mac N Cheese Burger',15,'#8171d8','GO BIG','Cheeseburger topped with mac n cheese.','burger'],['break','burgers','Breakfast Burger',16,'#f5c544','ALL DAY','Bacon, egg & cheese.','burger'],['blue','burgers','Bacon Blue Burger',16,'#2d8fe8','BOLD','Bacon & blue cheese crumble.','burger'],
-['wrap','wraps','Build Your Own Chicken Wrap',12,'#39d36c','CUSTOM','Chicken, lettuce, tomato, shredded cheese, onions & choice of sauce. Comes with fries.','burger'],['tender','wraps','Chicken Tender Dinner',10,'#ff7024','COMFORT','Chicken tenders with fries and choice of sauce.','burger'],['chopling','wraps','Chopped Linguica',15,'#ef3542','NEW BEDFORD','Linguica, cheese, peppers, onions, egg, ketchup & hot sauce.','burger'],['steak','wraps','Steak and Cheese Sub',7,'#2d8fe8','SANDWICH','Steak and cheese sub.','burger'],
-['fries','sides','French Fries',6,'#f5c544','SIDE','Crispy fries.','gold'],['cheese','sides','Cheese Fries',7,'#f5c544','SIDE','Fries with cheese.','gold'],['baconfr','sides','Bacon Cheese Fries',8,'#ff7024','SIDE','Fries with cheese and bacon.','gold'],['chili','sides','Chili Cheese Fries',8,'#ef3542','SIDE','Fries with chili and cheese.','gold'],['mozz','sides','Mozzarella Sticks',6,'#13c7f3','SIDE','Crispy mozzarella sticks.','gold'],['mac','sides','Mac N Cheese',4,'#8171d8','SIDE','Comfort-food classic.','gold'],
-['van','shakes','Vanilla Shake',6.5,'#f5c544','SHAKE','Classic vanilla.','shake'],['cc','shakes','Cookies N Cream',6.5,'#8171d8','SHAKE','Cookies, cream and a whole lot of chill.','shake'],['fruity2','shakes','Fruity Pebble',7,'#39d36c','SIGNATURE','Bright cereal shake.','shake'],['straw','shakes','Strawberry Shake',6.5,'#ef3542','SHAKE','Classic strawberry.','shake'],['choc','shakes','Chocolate Shake',6.5,'#ff7024','SHAKE','Classic chocolate.','shake'],['coffee','shakes','Coffee Shake',6.5,'#2d8fe8','SHAKE','Coffee-forward and creamy.','shake'],['oreos','desserts','Fried Oreos',6,'#8171d8','SWEET','Warm, crispy and dangerously easy to finish.','gold'],['rice','desserts','Rice Pudding',3,'#f5c544','SWEET','Comforting classic.','gold']];
-const cats={featured:'MOST LOVED',dogs:'DOGS',fries:'LOADED FRIES',burgers:'BURGERS',wraps:'WRAPS + CHICKEN',sides:'SIDES',shakes:'SHAKES',desserts:'SWEETS'};let active='featured',cart=[];
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)], money=n=>'$'+n.toFixed(2).replace('.00','');
-function photo(type){return IMG[type]||IMG.dog}
-function render(){const q=($('#menuSearch').value||'').toLowerCase();let list=items.filter(x=>x[1]===active&&(x[2].toLowerCase().includes(q)||x[6].toLowerCase().includes(q)));$('#menuTitle').textContent=cats[active];$('#menuGrid').innerHTML=list.map(x=>`<article class="card" style="--accent:${x[4]}"><div class="food-photo"><img src="${photo(x[7])}" alt="${x[2]}" loading="lazy" onerror="this.style.display='none'"></div><div class="card-body"><span class="tag">${x[5]}</span><h3>${x[2]}</h3><p>${x[6]}</p><div class="card-foot"><span class="price">${money(x[3])}</span><button class="add" data-item="${x[0]}">ADD +</button></div></div></article>`).join('')||'<div class="card"><div class="card-body"><h3>NOTHING FOUND.</h3><p>Try another search or category.</p></div></div>'}
-function openItem(id){const x=items.find(a=>a[0]===id);$('#modalName').textContent=x[2];$('#modalDesc').textContent=x[6];$('#modalPrice').textContent=money(x[3]);$('#modalTag').textContent=x[5];$('#modalImage').innerHTML=`<img src="${photo(x[7])}" alt="${x[2]}">`;$('#modalAdd').dataset.item=id;$('#itemModal').classList.add('open');$('#itemModal').setAttribute('aria-hidden','false')}
-function add(id){const x=items.find(a=>a[0]===id);let c=cart.find(a=>a.id===id);c?c.qty++:cart.push({id,qty:1});renderCart();toast(x[2]+' added')}
-function renderCart(){const count=cart.reduce((s,x)=>s+x.qty,0),total=cart.reduce((s,x)=>{const i=items.find(a=>a[0]===x.id);return s+i[3]*x.qty},0);$('#cartCount').textContent=count;$('#dockCount').textContent=count;$('#cartSummary').textContent=count?`${count} item${count>1?'s':''} · ${money(total)}`:'Nothing yet';$('#cartTotal').textContent=money(total);$('#cartItems').innerHTML=cart.length?cart.map(c=>{const i=items.find(a=>a[0]===c.id);return `<div class="cart-row"><div><strong>${i[2]}</strong><small>${c.qty} × ${money(i[3])}</small></div><button data-remove="${c.id}">REMOVE</button></div>`}).join(''):'<p style="color:#737c76;font-size:13px">Your order is waiting for something delicious.</p>'}
-function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');clearTimeout(window.tt);window.tt=setTimeout(()=>e.classList.remove('show'),1700)}
-$$('.cat').forEach(b=>b.onclick=()=>{active=b.dataset.cat;$$('.cat').forEach(x=>x.classList.toggle('active',x===b));render();$('#menu').scrollIntoView({behavior:'smooth',block:'start'})});$('#menuSearch').oninput=render;$('#menuGrid').onclick=e=>{const b=e.target.closest('[data-item]');if(b)openItem(b.dataset.item)};$('#modalAdd').onclick=e=>{add(e.target.dataset.item);$('#itemModal').classList.remove('open')};$$('[data-close]').forEach(b=>b.onclick=()=>$('#itemModal').classList.remove('open'));$('#startOrder').onclick=()=>$('#menu').scrollIntoView({behavior:'smooth'});$('#cartOpen').onclick=$('#cartDockOpen').onclick=()=>$('#cartPanel').classList.add('open');$('#cartClose').onclick=()=>$('#cartPanel').classList.remove('open');$('#cartItems').onclick=e=>{const id=e.target.dataset.remove;if(id){const c=cart.find(x=>x.id===id);c.qty--;if(c.qty<=0)cart=cart.filter(x=>x.id!==id);renderCart()}};$$('.mode').forEach(b=>b.onclick=()=>{$$('.mode').forEach(x=>x.classList.remove('active'));b.classList.add('active')});$$('[data-jump]').forEach(b=>b.onclick=()=>{$('.cat[data-cat="'+b.dataset.jump+'"]').click()});
-const dogChoices=[['Steamed Dog',2],['Grilled Dog',2.5],['All Beef',2.5],['Linguica Dog',3.25],['Vegan Dog',4]], toppings=[['Cheese',.5],['Chili',.75],['Bacon',.75],['Linguica',.75],['Potato Stix',.5],['Crunchy Onions',.5],['Sauerkraut',.5],['Hot Pepper Relish',.5],['Blue Cheese',.5]];let dogBase=2,dogName='Steamed Dog',selected=[];$('#dogChoices').innerHTML=dogChoices.map((x,i)=>`<button class="choice ${i===0?'active':''}" data-dog="${x[0]}" data-price="${x[1]}">${x[0]} · ${money(x[1])}</button>`).join('');$('#toppingChoices').innerHTML=toppings.map(x=>`<button class="choice" data-top="${x[0]}" data-price="${x[1]}">${x[0]} +${money(x[1])}</button>`).join('');function updateBuilder(){let total=dogBase+selected.reduce((s,x)=>s+x.price,0);$('#builderPrice').textContent=money(total);$('#builderSummary').textContent=dogName+(selected.length?' + '+selected.map(x=>x.name).join(' + '):'')};$('#dogChoices').onclick=e=>{const b=e.target.closest('[data-dog]');if(!b)return;$$('#dogChoices .choice').forEach(x=>x.classList.remove('active'));b.classList.add('active');dogName=b.dataset.dog;dogBase=+b.dataset.price;updateBuilder()};$('#toppingChoices').onclick=e=>{const b=e.target.closest('[data-top]');if(!b)return;const name=b.dataset.top,price=+b.dataset.price;b.classList.toggle('active');const idx=selected.findIndex(x=>x.name===name);idx>=0?selected.splice(idx,1):selected.push({name,price});updateBuilder()};$('#addBuilder').onclick=()=>{let id='builder-'+Date.now();items.push([id,'featured',dogName+' (Custom)',dogBase+selected.reduce((s,x)=>s+x.price,0),'#13c7f3','YOUR BUILD',selected.map(x=>x.name).join(', ')||'No extra toppings.','dog']);cart.push({id,qty:1});selected=[];$$('#toppingChoices .choice').forEach(x=>x.classList.remove('active'));renderCart();updateBuilder();toast('Your custom dog is in the order')};render();renderCart();
+const ORDER_URL = "https://order.online/store/kiyla-s-korner-cove-rd-31271415";
+
+const PHOTO = {
+  korner1: "https://kiylas-korner.food-menu.net/media/1-kiylas-korner.jpg",
+  korner2: "https://kiylas-korner.food-menu.net/media/2-kiylas-korner.jpg",
+  korner3: "https://kiylas-korner.food-menu.net/media/3-kiylas-korner.jpg",
+  korner4: "https://kiylas-korner.food-menu.net/media/4-kiylas-korner.jpg",
+  korner5: "https://kiylas-korner.food-menu.net/media/5-kiylas-korner.jpg"
+};
+
+const items = [
+  {id:"gold-fever",name:"Gold Fever Chicken Cheese Fries",price:16,cat:"Kiyla's Loaded Fries",desc:"One of the current most-ordered Kiyla's items.",popular:1,img:PHOTO.korner4,pos:"88% center"},
+  {id:"buffalo-fries",name:"Buffalo Chicken Cheese Fries",price:16,cat:"Kiyla's Loaded Fries",desc:"Loaded chicken cheese fries with buffalo flavor.",popular:2,img:PHOTO.korner2,pos:"76% center"},
+  {id:"sweet-chili",name:"Sweet Chili Chicken Cheese Fries",price:16,cat:"Kiyla's Loaded Fries",desc:"Sweet chili chicken cheese fries.",popular:3,img:PHOTO.korner2,pos:"72% center"},
+  {id:"chopped-cheese",name:"Chopped Cheese",price:15,cat:"Sandwiches & wraps",desc:"Beef, cheese, mozzarella sticks, peppers, onions, lettuce, tomato, ketchup & mayo. Served with French fries.",popular:4,img:PHOTO.korner2,pos:"10% center"},
+  {id:"bacon-cheeseburger",name:"Bacon Cheeseburger",price:15,cat:"Kiyla's Specialty Burgers",desc:"Served with French fries.",popular:5,img:PHOTO.korner2,pos:"48% center"},
+  {id:"garlic-parm",name:"NEW Garlic Parm",price:16,cat:"Kiyla's Loaded Fries",desc:"Current menu favorite listed as NEW Garlic Parm.",popular:6,img:PHOTO.korner5,pos:"3% center"},
+  {id:"tender-fries",name:"Tender & Fries",price:11,cat:"Sides",desc:"Chicken tenders served with fries.",popular:7,img:PHOTO.korner4,pos:"88% center"},
+  {id:"bbq-fries",name:"BBQ Chicken Cheese Fries",price:16,cat:"Kiyla's Loaded Fries",desc:"BBQ chicken cheese fries.",popular:8,img:PHOTO.korner5,pos:"3% center"},
+  {id:"ranch-fries",name:"Chicken Bacon Ranch Fries",price:16,cat:"Kiyla's Loaded Fries",desc:"Chicken, bacon, ranch and fries.",popular:9,img:PHOTO.korner5,pos:"3% center"},
+  {id:"build-burger",name:"Build Your Own Burger",price:14,cat:"Kiyla's Specialty Burgers",desc:"Served with French fries. Customize it your way.",popular:10,img:PHOTO.korner2,pos:"48% center",custom:true},
+  {id:"mac-burger",name:"Mac N Cheeseburger",price:15,cat:"Kiyla's Specialty Burgers",desc:"Cheeseburger topped with mac n cheese. Served with French fries.",popular:11,img:PHOTO.korner2,pos:"86% center"},
+  {id:"chopped-linguica",name:"Chopped Linguica",price:15,cat:"Sandwiches & wraps",desc:"Linguica, cheese, peppers, onions, egg, ketchup & hot sauce. Served with French fries.",popular:12,img:PHOTO.korner2,pos:"56% center"},
+  {id:"breakfast-burger",name:"Breakfast Burger",price:16,cat:"Kiyla's Specialty Burgers",desc:"Burger topped with bacon, cheese and a fried egg. Served with French fries.",popular:13,img:PHOTO.korner2,pos:"50% center"},
+  {id:"build-wrap",name:"Build Your Own Wrap",price:15,cat:"Sandwiches & wraps",desc:"Chicken, lettuce, tomato, shredded cheese, onions & your choice of sauce. Served with French fries.",popular:14,img:PHOTO.korner2,pos:"8% center",custom:true},
+  {id:"steak-cheese",name:"Steak and cheese sub",price:7,cat:"Sandwiches & wraps",desc:"Steak and cheese sub.",img:PHOTO.korner2,pos:"12% center"},
+  {id:"texas-burger",name:"Texas Burger",price:16,cat:"Kiyla's Specialty Burgers",desc:"Cheeseburger topped with BBQ sauce, bacon and crunchy onions. Served with French fries.",img:PHOTO.korner2,pos:"50% center"},
+  {id:"azorean-burger",name:"Azorean Burger",price:15,cat:"Kiyla's Specialty Burgers",desc:"Cheese, ketchup, mustard, relish, onions, mayo, hot sauce and potato stix. Served with French fries.",img:PHOTO.korner2,pos:"55% center"},
+  {id:"bacon-blue",name:"Bacon Blue Burger",price:16,cat:"Kiyla's Specialty Burgers",desc:"Bacon and blue cheese crumble.",img:PHOTO.korner2,pos:"50% center"},
+  {id:"loaded-taco",name:"Loaded Taco Fries",price:16,cat:"Kiyla's Loaded Fries",desc:"Current loaded fries menu option.",img:PHOTO.korner5,pos:"4% center"},
+  {id:"vegan-dog",name:"Vegan Dog",price:4,cat:"Build Your Own Dogs",desc:"Vegan dog with customizable toppings.",img:PHOTO.korner4,pos:"50% center",custom:true},
+  {id:"linguica-dog",name:"Linguica Dog",price:3.25,cat:"Build Your Own Dogs",desc:"Savory linguica served on a hot dog bun.",img:PHOTO.korner2,pos:"72% center",custom:true},
+  {id:"all-beef",name:"All Beef",price:2.5,cat:"Build Your Own Dogs",desc:"Beef hot dog with your choice of toppings.",img:PHOTO.korner2,pos:"86% center",custom:true},
+  {id:"grilled-dog",name:"Grilled Dog",price:2.5,cat:"Build Your Own Dogs",desc:"Customizable grilled hot dog with your choice of toppings.",img:PHOTO.korner4,pos:"50% center",custom:true},
+  {id:"steamed-dog",name:"Steamed Dog",price:2,cat:"Build Your Own Dogs",desc:"Steamed hot dog.",img:PHOTO.korner4,pos:"50% center",custom:true},
+  {id:"chili-cheese-dog",name:"Chili & Cheese Dog",price:3,cat:"Kiyla's Specialty Dogs",desc:"Chili and cheese.",img:PHOTO.korner2,pos:"72% center"},
+  {id:"linguica-cheese-dog",name:"Linguica & Cheese Dog",price:3,cat:"Kiyla's Specialty Dogs",desc:"Shredded linguica and cheese.",img:PHOTO.korner2,pos:"72% center"},
+  {id:"blt-dog",name:"BLT Dog",price:4,cat:"Kiyla's Specialty Dogs",desc:"Bacon, lettuce and tomato.",img:PHOTO.korner2,pos:"12% center"},
+  {id:"azorean-dog",name:"Azorean Dog",price:3,cat:"Kiyla's Specialty Dogs",desc:"Relish, onions, ketchup, mustard, mayo, hot sauce and potato stix.",img:PHOTO.korner2,pos:"72% center"},
+  {id:"new-england-dog",name:"New England Dog",price:3.5,cat:"Kiyla's Specialty Dogs",desc:"Baked beans and bacon.",img:PHOTO.korner2,pos:"72% center"},
+  {id:"buffalo-dog",name:"Buffalo Dog",price:3,cat:"Kiyla's Specialty Dogs",desc:"Hot sauce and blue cheese crumble.",img:PHOTO.korner2,pos:"72% center"},
+  {id:"bacon-cheese-dog",name:"Bacon & Cheese Dog",price:3.5,cat:"Kiyla's Specialty Dogs",desc:"Bacon and cheese.",img:PHOTO.korner2,pos:"72% center"},
+  {id:"texas-dog",name:"Texas Dog",price:4,cat:"Kiyla's Specialty Dogs",desc:"BBQ sauce, bacon and crunchy onions.",img:PHOTO.korner2,pos:"72% center"},
+  {id:"coney-island",name:"Coney Island Dog",price:3.5,cat:"Kiyla's Specialty Dogs",desc:"Coney Island sauce, mustard and onions.",img:PHOTO.korner2,pos:"72% center"},
+  {id:"pizza-dog",name:"Pizza Dog",price:3,cat:"Kiyla's Specialty Dogs",desc:"Pizza sauce and pizza cheese.",img:PHOTO.korner2,pos:"72% center"},
+  {id:"mac-dog",name:"Mac N Cheese Dog",price:3,cat:"Kiyla's Specialty Dogs",desc:"Topped with mac n cheese.",img:PHOTO.korner4,pos:"50% center"},
+  {id:"doritos-dog",name:"Doritos Dog",price:3,cat:"Kiyla's Specialty Dogs",desc:"Cheese and Doritos.",img:PHOTO.korner2,pos:"72% center"},
+  {id:"mozz-sticks",name:"Mozzarella Sticks",price:6,cat:"Sides",desc:"Crispy mozzarella sticks.",img:PHOTO.korner4,pos:"88% center"},
+  {id:"cheese-fries",name:"Cheese Fries",price:6,cat:"Sides",desc:"French fries with cheese.",img:PHOTO.korner5,pos:"4% center"},
+  {id:"bacon-cheese-fries",name:"Bacon Cheese Fries",price:10,cat:"Sides",desc:"French fries with bacon and cheese.",img:PHOTO.korner5,pos:"4% center"},
+  {id:"mac-cheese",name:"Mac N Cheese",price:5,cat:"Sides",desc:"Creamy mac n cheese.",img:PHOTO.korner4,pos:"50% center"},
+  {id:"french-fries",name:"French Fries",price:6,cat:"Sides",desc:"Classic seasoned fries.",img:PHOTO.korner4,pos:"89% center"},
+  {id:"chili-cheese-fries",name:"Chili Cheese Fries",price:8,cat:"Sides",desc:"Fries topped with chili and cheese.",img:PHOTO.korner5,pos:"4% center"},
+  {id:"coffee-shake",name:"Coffee",price:6.5,cat:"Milk Shakes",desc:"Rich and creamy coffee milk shake.",img:PHOTO.korner2,pos:"53% center"},
+  {id:"strawberry-shake",name:"Strawberry",price:6.5,cat:"Milk Shakes",desc:"Rich and creamy strawberry milk shake.",img:PHOTO.korner2,pos:"53% center"},
+  {id:"vanilla-shake",name:"Vanilla",price:6.5,cat:"Milk Shakes",desc:"Creamy classic vanilla milk shake.",img:PHOTO.korner2,pos:"53% center"},
+  {id:"chocolate-shake",name:"Chocolate",price:6.5,cat:"Milk Shakes",desc:"Rich and creamy chocolate milk shake.",img:PHOTO.korner2,pos:"53% center"},
+  {id:"cookies-shake",name:"Cookies N Cream",price:6.5,cat:"Milk Shakes",desc:"Cookies N Cream milk shake.",img:PHOTO.korner2,pos:"53% center"},
+  {id:"fruity-pebble",name:"Fruity pebble",price:7,cat:"Milk Shakes",desc:"Fruity Pebble milk shake.",img:PHOTO.korner2,pos:"53% center"},
+  {id:"fried-oreos",name:"Fried Oreos",price:6,cat:"Desert",desc:"Fried Oreos.",img:PHOTO.korner2,pos:"35% center"},
+  {id:"rice-pudding",name:"Rice Pudding",price:3,cat:"Desert",desc:"Rice pudding.",img:PHOTO.korner2,pos:"35% center"},
+  {id:"fountain",name:"Fountain Drink",price:3,cat:"Drinks",desc:"Cold fountain drink.",img:PHOTO.korner2,pos:"55% center"},
+  {id:"water",name:"Bottled Water",price:2,cat:"Drinks",desc:"Cold bottled water.",img:PHOTO.korner3,pos:"50% center"}
+];
+
+const categories = [
+  "Most Ordered",
+  "Sandwiches & wraps",
+  "Kiyla's Specialty Burgers",
+  "Kiyla's Loaded Fries",
+  "Kiyla's Specialty Dogs",
+  "Build Your Own Dogs",
+  "Sides",
+  "Milk Shakes",
+  "Desert",
+  "Drinks"
+];
+
+const categoryHeadlines = {
+  "Most Ordered":"The crowd favorites.",
+  "Sandwiches & wraps":"Big handheld energy.",
+  "Kiyla's Specialty Burgers":"Stacked, saucy, serious.",
+  "Kiyla's Loaded Fries":"Loaded means loaded.",
+  "Kiyla's Specialty Dogs":"Classic dogs, Korner style.",
+  "Build Your Own Dogs":"Pick your dog. Make it yours.",
+  "Sides":"Add something extra.",
+  "Milk Shakes":"Cold, creamy, gone fast.",
+  "Desert":"Something sweet.",
+  "Drinks":"Keep it cold."
+};
+
+let activeCategory = "Most Ordered";
+let cart = [];
+let activeItem = null;
+let activeSelections = [];
+
+const $ = (s)=>document.querySelector(s);
+const money = n => `$${Number(n).toFixed(2)}`;
+
+function visibleItems(){
+  const q = $("#menuSearch").value.trim().toLowerCase();
+  let list = activeCategory === "Most Ordered"
+    ? items.filter(i=>i.popular).sort((a,b)=>a.popular-b.popular)
+    : items.filter(i=>i.cat===activeCategory);
+  if(q) list = items.filter(i=>(i.name+" "+i.cat+" "+i.desc).toLowerCase().includes(q));
+  return list;
+}
+
+function renderCategories(){
+  $("#categoryButtons").innerHTML = categories.map(c =>
+    `<button class="${c===activeCategory?"active":""}" data-category="${c.replaceAll('"','&quot;')}">${c}</button>`
+  ).join("");
+  document.querySelectorAll("[data-category]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      activeCategory = btn.dataset.category;
+      $("#menuSearch").value = "";
+      render();
+    });
+  });
+}
+
+function foodImage(item){
+  return `<img src="${item.img}" alt="${item.name}" style="object-position:${item.pos||"center"}" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+          <div class="image-fallback" style="display:none">${item.name}</div>`;
+}
+
+function renderPopular(){
+  const popular = items.filter(i=>i.popular && i.popular <= 3).sort((a,b)=>a.popular-b.popular);
+  $("#popularStrip").style.display = activeCategory==="Most Ordered" && !$("#menuSearch").value ? "grid" : "none";
+  $("#popularStrip").innerHTML = popular.map(i=>`
+    <button class="popular-card" data-open="${i.id}" aria-label="View ${i.name}">
+      <img src="${i.img}" alt="" style="object-position:${i.pos}">
+      <span class="popular-card-copy"><span>#${i.popular} MOST ORDERED</span><strong>${i.name}</strong></span>
+    </button>
+  `).join("");
+}
+
+function renderGrid(){
+  const list = visibleItems();
+  $("#foodGrid").innerHTML = list.length ? list.map(i=>`
+    <article class="food-card">
+      <div class="food-photo">
+        ${foodImage(i)}
+        ${i.popular && i.popular<=5 ? `<span class="food-badge">${i.popular===1?"#1 MOST ORDERED":"POPULAR"}</span>`:""}
+      </div>
+      <div class="food-copy">
+        <div class="food-name">${i.name}</div>
+        <div class="food-desc">${i.desc}</div>
+        <div class="food-bottom">
+          <strong>${money(i.price)}</strong>
+          <button class="food-add" data-open="${i.id}">${i.custom?"CUSTOMIZE":"ADD"} +</button>
+        </div>
+      </div>
+    </article>
+  `).join("") : `<div class="empty-cart">Nothing matched that search.</div>`;
+  document.querySelectorAll("[data-open]").forEach(el=>el.addEventListener("click",()=>openDialog(el.dataset.open)));
+}
+
+function render(){
+  renderCategories();
+  $("#categoryLabel").textContent = activeCategory.toUpperCase();
+  $("#categoryTitle").textContent = $("#menuSearch").value ? "Search results." : categoryHeadlines[activeCategory];
+  renderPopular();
+  renderGrid();
+}
+
+function openDialog(id){
+  activeItem = items.find(i=>i.id===id);
+  activeSelections = [];
+  $("#dialogCategory").textContent = activeItem.cat;
+  $("#dialogName").textContent = activeItem.name;
+  $("#dialogDescription").textContent = activeItem.desc;
+  $("#dialogPrice").textContent = money(activeItem.price);
+  $("#dialogMedia").innerHTML = foodImage(activeItem);
+  const customizable = activeItem.custom || ["Kiyla's Specialty Burgers","Kiyla's Specialty Dogs","Sandwiches & wraps"].includes(activeItem.cat);
+  $("#dialogOptions").innerHTML = customizable ? `
+    <h4>Make it yours</h4>
+    <div class="option-chips">
+      ${["Cheese","Onions","Relish","Potato Stix","Crunchy Onions","Sauerkraut","Hot Sauce","Mayo","Bacon","Linguica"].map(x=>`<button class="option-chip" data-option="${x}">${x}</button>`).join("")}
+    </div>
+  ` : `<h4>Order notes</h4><div class="option-chips"><button class="option-chip" data-option="As listed">As listed</button><button class="option-chip" data-option="No onions">No onions</button><button class="option-chip" data-option="No mayo">No mayo</button></div>`;
+  document.querySelectorAll("[data-option]").forEach(btn=>btn.addEventListener("click",()=>{
+    btn.classList.toggle("selected");
+    const v=btn.dataset.option;
+    if(btn.classList.contains("selected")) activeSelections.push(v);
+    else activeSelections=activeSelections.filter(x=>x!==v);
+  }));
+  $("#itemDialog").showModal();
+}
+
+function renderCart(){
+  $("#cartCountBubble").textContent = cart.reduce((a,b)=>a+b.qty,0);
+  const count = cart.reduce((a,b)=>a+b.qty,0);
+  $("#mobileCartCount").textContent = `${count} ${count===1?"item":"items"}`;
+  const total = cart.reduce((a,b)=>a+b.price*b.qty,0);
+  $("#cartSubtotal").textContent = money(total);
+  $("#mobileCartTotal").textContent = money(total);
+  $("#cartItems").innerHTML = cart.length ? cart.map((row,index)=>`
+    <div class="cart-line">
+      <div>
+        <strong>${row.name}</strong>
+        ${row.mods.length?`<small>${row.mods.join(", ")}</small>`:""}
+      </div>
+      <div class="cart-qty">
+        <button data-minus="${index}">−</button>
+        <span>${row.qty}</span>
+        <button data-plus="${index}">+</button>
+      </div>
+    </div>
+  `).join("") : `<div class="empty-cart">Nothing here yet.<br>Tap something that looks good.</div>`;
+  document.querySelectorAll("[data-minus]").forEach(b=>b.addEventListener("click",()=>changeQty(+b.dataset.minus,-1)));
+  document.querySelectorAll("[data-plus]").forEach(b=>b.addEventListener("click",()=>changeQty(+b.dataset.plus,1)));
+}
+
+function addActive(){
+  if(!activeItem) return;
+  const signature = activeItem.id+"|"+activeSelections.join(",");
+  const existing = cart.find(x=>x.signature===signature);
+  if(existing) existing.qty++;
+  else cart.push({signature,name:activeItem.name,price:activeItem.price,qty:1,mods:[...activeSelections]});
+  $("#itemDialog").close();
+  renderCart();
+}
+
+function changeQty(index, delta){
+  cart[index].qty += delta;
+  if(cart[index].qty<=0) cart.splice(index,1);
+  renderCart();
+}
+
+$("#menuSearch").addEventListener("input",render);
+$("#dialogClose").addEventListener("click",()=>$("#itemDialog").close());
+$("#dialogAdd").addEventListener("click",addActive);
+$("#checkoutButton").addEventListener("click",()=>window.open(ORDER_URL,"_blank"));
+$("#mobileCartButton").addEventListener("click",()=>{
+  document.querySelector("#menu").scrollIntoView({behavior:"smooth"});
+  if(cart.length) window.setTimeout(()=>window.open(ORDER_URL,"_blank"),450);
+});
+document.querySelectorAll("[data-scroll-order]").forEach(b=>b.addEventListener("click",()=>$("#menu").scrollIntoView({behavior:"smooth"})));
+document.querySelectorAll(".service-toggle button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".service-toggle button").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active");
+  $("#cartMode").textContent = `${b.dataset.mode==="pickup"?"Pickup":"Delivery"} · New Bedford`;
+}));
+render();
+renderCart();

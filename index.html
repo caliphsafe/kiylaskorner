@@ -1,94 +1,234 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kiyla's Korner — New Bedford, MA</title>
-<meta name="description" content="Order Kiyla's Korner favorites in New Bedford — loaded fries, specialty burgers, dogs, wraps, shakes, sides and more.">
-<link rel="canonical" href="https://kiylaskorner.com/">
-<meta property="og:title" content="Kiyla's Korner — Come Hungry">
-<meta property="og:description" content="A colorful New Bedford food-truck experience. Order online for pickup or delivery.">
-<meta property="og:type" content="website">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Nunito:wght@500;600;700;800;900&display=swap');
-:root{--ink:#101113;--ink2:#17191b;--paper:#f4eee0;--white:#fffaf0;--red:#ef4035;--orange:#f47722;--yellow:#f5c33d;--green:#39b85c;--purple:#7166c7;--blue:#3b91dc;--cyan:#19bddd;--pink:#ed5b83;--line:#2d3032;--shadow:0 14px 0 #090a0b;}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--white);font-family:Nunito,system-ui,sans-serif}button,input{font:inherit}button{cursor:pointer}.shell{max-width:1500px;margin:auto;padding:0 24px}.topbar{position:sticky;top:0;z-index:50;background:rgba(16,17,19,.94);backdrop-filter:blur(14px);border-bottom:2px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white)}.brand-mark{width:44px;height:44px;border:3px solid var(--white);border-radius:12px 16px 10px 15px;background:var(--cyan);transform:rotate(-4deg);display:grid;place-items:center;color:var(--ink);font-weight:900;font-size:22px}.brand-text{font-family:'Bowlby One SC',sans-serif;font-size:22px;letter-spacing:.5px}.navlinks{display:flex;gap:8px}.navlinks a{color:var(--white);text-decoration:none;padding:10px 13px;border-radius:999px;font-weight:900}.navlinks a:hover{background:#26292b}.order-btn{border:0;border-radius:999px;background:var(--yellow);color:var(--ink);font-weight:900;padding:13px 20px;box-shadow:0 5px 0 #9e7d16}.cart-mini{background:var(--white);border:0;border-radius:999px;padding:12px 15px;font-weight:900;color:var(--ink)}
-.hero{padding:34px 0 20px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch}.hero-copy{min-height:590px;border:3px solid #303234;border-radius:34px;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 15%,#2c2f31 0 12%,transparent 13%),linear-gradient(135deg,#141617,#0d0e0f);padding:42px;display:flex;flex-direction:column;justify-content:space-between}.hero-copy:before,.hero-copy:after{content:"";position:absolute;border-radius:50%;opacity:.9}.hero-copy:before{width:190px;height:190px;background:var(--red);right:-70px;bottom:60px}.hero-copy:after{width:95px;height:95px;background:var(--cyan);right:105px;top:25px}.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:900;text-transform:uppercase;letter-spacing:1.5px;color:#d7d2c7}.dot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px #15351f}.hero h1{font-family:'Bowlby One SC',sans-serif;font-size:clamp(54px,7.5vw,120px);line-height:.88;margin:25px 0 18px;max-width:850px;letter-spacing:-3px}.hero h1 span:nth-child(1){color:var(--red)}.hero h1 span:nth-child(2){color:var(--yellow)}.hero h1 span:nth-child(3){color:var(--cyan)}.hero h1 span:nth-child(4){color:var(--purple)}.hero p{max-width:570px;font-size:20px;line-height:1.45;color:#c7c5bf;margin:0}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;position:relative;z-index:2}.primary{border:0;background:var(--cyan);color:var(--ink);font-weight:900;padding:16px 22px;border-radius:16px;box-shadow:0 6px 0 #08778d}.secondary{border:2px solid #5b5e60;background:#202325;color:var(--white);font-weight:900;padding:15px 22px;border-radius:16px}.hero-photo{position:relative;border-radius:34px;overflow:hidden;border:3px solid #303234;background:#202224;min-height:590px}.hero-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.08)}.photo-label{position:absolute;left:20px;bottom:20px;background:var(--paper);color:var(--ink);padding:13px 16px;border:3px solid var(--ink);border-radius:16px;font-weight:900;transform:rotate(-2deg);box-shadow:7px 7px 0 rgba(0,0,0,.45)}.photo-label b{font-family:'Bowlby One SC',sans-serif}.rock{position:absolute;right:18px;top:18px;width:92px;height:72px;background:var(--orange);border:3px solid var(--ink);clip-path:polygon(16% 4%,83% 0,100% 42%,80% 94%,26% 100%,0 55%);transform:rotate(8deg)}
-.order-zone{padding:22px 0 70px}.order-board{background:#0d0f10;border:3px solid #2b2e30;border-radius:34px;overflow:hidden}.order-head{padding:22px 24px;border-bottom:2px solid #292c2e;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.order-title{font-family:'Bowlby One SC',sans-serif;font-size:34px}.mode{display:flex;background:#1b1e20;border:2px solid #35383a;border-radius:999px;padding:4px}.mode button{border:0;background:transparent;color:#a9a8a2;padding:10px 18px;border-radius:999px;font-weight:900}.mode button.active{background:var(--yellow);color:var(--ink)}.order-layout{display:grid;grid-template-columns:210px 1fr 330px;min-height:680px}.cats{padding:16px;border-right:2px solid #292c2e}.cats button{display:block;width:100%;text-align:left;background:transparent;color:#c9c7c0;border:0;padding:13px 14px;border-radius:12px;font-weight:900;margin-bottom:5px}.cats button:hover,.cats button.active{background:#25282a;color:var(--white)}.cats button.active{box-shadow:inset 5px 0 var(--cyan)}.menu-main{padding:22px;min-width:0}.search{display:flex;gap:10px;margin-bottom:18px}.search input{width:100%;background:#191c1e;border:2px solid #343739;color:var(--white);border-radius:14px;padding:14px 16px;outline:none}.search input:focus{border-color:var(--cyan)}.food-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.food-card{background:#171a1c;border:2px solid #2c3032;border-radius:20px;overflow:hidden;transition:.18s transform,.18s border-color;display:flex;flex-direction:column}.food-card:hover{transform:translateY(-4px);border-color:#5a5d60}.food-img{height:170px;position:relative;overflow:hidden;background:#26292b}.food-img img{width:100%;height:100%;object-fit:cover;display:block}.food-img .art{position:absolute;inset:0;display:grid;place-items:center;font-family:'Bowlby One SC';font-size:38px;color:var(--ink);text-align:center;padding:20px;line-height:1}.art.red{background:var(--red)}.art.yellow{background:var(--yellow)}.art.green{background:var(--green)}.art.blue{background:var(--blue)}.art.purple{background:var(--purple)}.art.orange{background:var(--orange)}.art.cyan{background:var(--cyan)}.food-body{padding:15px;display:flex;flex-direction:column;flex:1}.food-name{font-weight:900;font-size:18px}.food-desc{color:#aeadab;font-size:13px;line-height:1.35;margin:6px 0 12px}.food-bottom{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px}.price{font-weight:900;font-size:18px}.add{border:0;border-radius:10px;background:var(--white);color:var(--ink);font-weight:900;padding:9px 12px}.tag{position:absolute;top:10px;left:10px;background:var(--yellow);color:var(--ink);font-size:11px;font-weight:900;padding:6px 8px;border-radius:999px}.cart{background:#121416;border-left:2px solid #292c2e;padding:20px;position:relative}.cart-inner{position:sticky;top:95px}.cart h3{font-family:'Bowlby One SC',sans-serif;font-size:25px;margin:0 0 6px}.cart-sub{font-size:13px;color:#9d9b96;margin-bottom:18px}.cart-items{min-height:170px}.empty{border:2px dashed #3b3e40;border-radius:15px;padding:22px;color:#8f8d88;text-align:center}.cart-row{display:grid;grid-template-columns:1fr auto;gap:10px;padding:13px 0;border-bottom:1px solid #292c2e}.cart-row strong{font-size:14px}.cart-row small{display:block;color:#8f8d88;margin-top:3px}.qty{display:flex;align-items:center;gap:7px}.qty button{width:25px;height:25px;border-radius:50%;border:1px solid #555;background:#272a2c;color:#fff}.cart-total{border-top:2px solid #383b3d;margin-top:15px;padding-top:15px}.total-line{display:flex;justify-content:space-between;margin:8px 0}.checkout{width:100%;border:0;background:var(--green);color:var(--ink);font-weight:900;border-radius:14px;padding:15px;margin-top:10px;box-shadow:0 5px 0 #187337}.notice{font-size:11px;color:#7e7c78;text-align:center;margin-top:9px}
-.build{padding:15px 0 80px}.build-card{border-radius:32px;background:var(--paper);color:var(--ink);padding:34px;border:3px solid #080909;box-shadow:var(--shadow);position:relative;overflow:hidden}.build-card:before{content:"";position:absolute;width:280px;height:170px;right:-40px;top:-35px;background:var(--purple);clip-path:polygon(15% 0,100% 10%,92% 75%,64% 100%,7% 82%,0 28%);transform:rotate(9deg)}.build-kicker{font-weight:900;text-transform:uppercase;letter-spacing:2px}.build h2{font-family:'Bowlby One SC';font-size:clamp(40px,6vw,76px);line-height:.9;max-width:720px;margin:12px 0}.build p{max-width:650px;font-size:18px}.build-options{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px;position:relative;z-index:2}.build-option{border:3px solid var(--ink);background:var(--white);padding:22px;border-radius:20px;text-align:left;box-shadow:5px 5px 0 var(--ink)}.build-option:nth-child(1){background:var(--cyan)}.build-option:nth-child(2){background:var(--yellow)}.build-option:nth-child(3){background:var(--orange)}.build-option strong{display:block;font-family:'Bowlby One SC';font-size:26px}.build-option span{font-weight:800}.story{padding:0 0 80px}.story-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px}.story-image{min-height:420px;border-radius:28px;overflow:hidden;border:3px solid #303234}.story-image img{width:100%;height:100%;object-fit:cover}.story-copy{background:#181a1c;border:2px solid #2c2f31;border-radius:28px;padding:35px}.story-copy h2{font-family:'Bowlby One SC';font-size:45px;margin:0 0 15px}.story-copy p{color:#c0bdb6;font-size:18px;line-height:1.55}.footer{border-top:2px solid #2a2d2f;padding:35px 0 80px;color:#96948e}.footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer strong{color:#fff}.modal{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:100;display:none;align-items:flex-end;justify-content:center;padding:20px}.modal.show{display:flex}.sheet{width:min(720px,100%);background:var(--paper);color:var(--ink);border:3px solid var(--ink);border-radius:28px 28px 18px 18px;box-shadow:0 20px 0 rgba(0,0,0,.3);padding:26px;max-height:90vh;overflow:auto}.sheet-head{display:flex;justify-content:space-between;gap:12px}.sheet h3{font-family:'Bowlby One SC';font-size:32px;margin:0}.close{border:0;background:#ddd3c0;width:40px;height:40px;border-radius:50%;font-size:20px;font-weight:900}.modifier{margin-top:20px}.modifier h4{margin:0 0 9px}.choices{display:flex;flex-wrap:wrap;gap:8px}.choice{border:2px solid #aaa08e;background:#fffaf0;border-radius:999px;padding:9px 12px;font-weight:900}.choice.selected{background:var(--cyan);border-color:var(--ink)}.sheet-footer{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-top:24px;border-top:2px solid #c9c0b1;padding-top:18px}.sheet-add{border:0;background:var(--green);padding:13px 18px;border-radius:12px;font-weight:900}.mobile-cart{display:none}
-@media(max-width:1100px){.hero-grid{grid-template-columns:1fr}.hero-photo{min-height:430px}.order-layout{grid-template-columns:170px 1fr}.cart{display:none}.food-grid{grid-template-columns:repeat(2,1fr)}.mobile-cart{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:60;background:var(--white);color:var(--ink);padding:13px 16px;border-radius:16px;justify-content:space-between;align-items:center;box-shadow:0 8px 0 #000;border:2px solid #000}.mobile-cart button{border:0;background:var(--cyan);font-weight:900;padding:10px 14px;border-radius:10px}.navlinks{display:none}.story-grid{grid-template-columns:1fr}.build-options{grid-template-columns:1fr}}
-@media(max-width:680px){.shell{padding:0 14px}.nav{height:66px}.brand-text{font-size:18px}.cart-mini{padding:10px 12px}.hero{padding-top:14px}.hero-copy{min-height:520px;padding:25px;border-radius:24px}.hero h1{font-size:56px;letter-spacing:-2px}.hero p{font-size:17px}.hero-photo{min-height:330px;border-radius:24px}.order-head{padding:17px}.order-title{font-size:27px}.order-layout{display:block}.cats{display:flex;overflow:auto;border-right:0;border-bottom:2px solid #292c2e;gap:7px;padding:10px}.cats button{white-space:nowrap;width:auto;margin:0;padding:9px 12px}.menu-main{padding:14px}.food-grid{grid-template-columns:1fr}.food-img{height:200px}.build-card{padding:24px;border-radius:25px}.story-copy{padding:25px}.story-copy h2{font-size:37px}.modal{padding:0}.sheet{border-radius:24px 24px 0 0}.sheet h3{font-size:27px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kiyla's Korner | New Bedford Food Truck</title>
+  <meta name="description" content="Order Kiyla's Korner favorites in New Bedford: loaded fries, specialty burgers, dogs, wraps, shakes, sides and more." />
+  <meta name="theme-color" content="#111214" />
+  <link rel="canonical" href="https://kiylaskorner.com/" />
+  <meta property="og:title" content="Kiyla's Korner | Come Hungry" />
+  <meta property="og:description" content="A colorful New Bedford food truck with loaded fries, specialty burgers, dogs, wraps, shakes and more." />
+  <meta property="og:type" content="restaurant" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Restaurant",
+    "name":"Kiyla's Korner",
+    "telephone":"+1-508-858-7456",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"85 Osborne St",
+      "addressLocality":"New Bedford",
+      "addressRegion":"MA",
+      "postalCode":"02740",
+      "addressCountry":"US"
+    },
+    "servesCuisine":["American","Burgers","Hot Dogs","Food Truck"],
+    "acceptsReservations":"False",
+    "url":"https://kiylaskorner.com/",
+    "sameAs":["https://order.online/store/kiyla-s-korner-cove-rd-31271415"]
+  }
+  </script>
 </head>
 <body>
-<header class="topbar"><div class="shell nav"><a class="brand" href="#top"><span class="brand-mark">K</span><span class="brand-text">Kiyla's Korner</span></a><nav class="navlinks"><a href="#order">Order</a><a href="#build">Build Your Own</a><a href="#story">Our Story</a></nav><div style="display:flex;gap:8px"><button class="cart-mini" id="cartTop">Cart <span id="topCount">0</span></button><button class="order-btn" onclick="document.getElementById('order').scrollIntoView()">Order Now</button></div></div></header>
-<main id="top">
-<section class="hero"><div class="shell hero-grid"><div class="hero-copy"><div><div class="eyebrow"><span class="dot"></span> New Bedford's colorful corner</div><h1><span>COME</span><br><span>HUNGRY.</span><br><span>LEAVE</span><br><span>HAPPY.</span></h1><p>Food-truck comfort food, big flavors and a whole lot of personality. Pick your favorites, build it your way and get your order moving.</p></div><div class="hero-actions"><button class="primary" onclick="document.getElementById('order').scrollIntoView()">START YOUR ORDER →</button><button class="secondary" onclick="document.getElementById('build').scrollIntoView()">BUILD YOUR OWN</button></div></div><div class="hero-photo"><img src="assets/kiylas-korner-reference.png" alt="Kiyla's Korner outdoor seating and colorful sign"><div class="rock"></div><div class="photo-label"><b>MEET ME AT<br>THE KORNER.</b><br>85 Osborne St · New Bedford</div></div></div></section>
-<section class="order-zone" id="order"><div class="shell"><div class="order-board"><div class="order-head"><div><div class="eyebrow">The Korner Counter</div><div class="order-title">ORDER SOMETHING GOOD.</div></div><div class="mode"><button class="active" data-mode="pickup">Pickup</button><button data-mode="delivery">Delivery</button></div></div><div class="order-layout"><aside class="cats" id="cats"></aside><div class="menu-main"><div class="search"><input id="search" placeholder="Search the Korner..." autocomplete="off"></div><div class="food-grid" id="foodGrid"></div></div><aside class="cart"><div class="cart-inner"><h3>Your order</h3><div class="cart-sub" id="cartMode">Pickup · New Bedford</div><div class="cart-items" id="cartItems"></div><div class="cart-total"><div class="total-line"><span>Subtotal</span><strong id="subtotal">$0.00</strong></div><div class="total-line"><span>Estimated total</span><strong id="total">$0.00</strong></div><button class="checkout" id="checkout">Continue to checkout</button><div class="notice">Checkout connects to Kiyla's online ordering service.</div></div></div></aside></div></div></div></section>
-<section class="build" id="build"><div class="shell"><div class="build-card"><div class="build-kicker">The fun part</div><h2>BUILD YOUR OWN. HOWEVER YOU WANT IT.</h2><p>Not just dogs. If Kiyla's lets you build it, this is where you start. Choose a burger, a wrap or a dog, then make it yours.</p><div class="build-options"><button class="build-option" onclick="quickBuild('Build Your Own Burger')"><strong>BURGER</strong><span>Start with a Build Your Own Burger.</span></button><button class="build-option" onclick="quickBuild('Build Your Own Wrap')"><strong>WRAP</strong><span>Build Your Own Wrap and pick your extras.</span></button><button class="build-option" onclick="quickBuild('Grilled Dog')"><strong>DOG</strong><span>Pick your dog and pile on the toppings.</span></button></div></div></div></section>
-<section class="story" id="story"><div class="shell story-grid"><div class="story-image"><img src="assets/kiylas-sign.png" alt="Kiyla's Korner colorful sign"></div><div class="story-copy"><div class="eyebrow">The Korner is more than a menu</div><h2>BUILT FOR THE NEIGHBORHOOD.</h2><p>Kiyla's Korner is a family-friendly food-truck stop at Cove Road and Osborne Street in New Bedford. The colorful outdoor setup, casual atmosphere and comfort-food menu make it a place to grab something quick or hang out for a while.</p><p>The site keeps the focus where it belongs: the food, the order and the fun of making it your own.</p></div></div></section>
-</main>
-<footer class="footer"><div class="shell footer-grid"><div><strong>Kiyla's Korner</strong><br>85 Osborne St · New Bedford, MA 02740</div><div><strong>(508) 858-7456</strong><br>Pickup · Delivery · Outdoor seating</div><div>© 2026 Kiyla's Korner</div></div></footer>
-<div class="mobile-cart"><span><strong id="mobileCount">0 items</strong><br><small id="mobileTotal">$0.00</small></span><button onclick="openCartSheet()">View order →</button></div>
-<div class="modal" id="modal"><div class="sheet"><div class="sheet-head"><div><div class="eyebrow" id="modalCategory">Korner item</div><h3 id="modalName"></h3><p id="modalDesc" style="color:#655f55"></p></div><button class="close" onclick="closeModal()">×</button></div><div class="modifier" id="modifiers"></div><div class="sheet-footer"><strong id="modalPrice">$0.00</strong><button class="sheet-add" onclick="addModalItem()">Add to order</button></div></div></div>
-<script>
-const MENU={
-"Most Ordered":[
-['Gold Fever Chicken Cheese Fries',16,'Crispy fries loaded with chicken, shredded cheese, ranch, bacon & green onions.','Kiyla’s Loaded Fries','yellow'],
-['Buffalo Chicken Cheese Fries',16,'Crispy fries loaded with chicken, shredded cheese, ranch, bacon & green onions.','Kiyla’s Loaded Fries','red'],
-['Sweet Chili Chicken Cheese Fries',16,'Chicken, shredded cheese, ranch, bacon & green onions with sweet chili flavor.','Kiyla’s Loaded Fries','orange'],
-['Chopped Cheese',15,'Beef, cheese, mozzarella sticks, peppers, onions, lettuce, tomato, ketchup & mayo. Served with French fries.','Sandwiches & wraps','cyan'],
-['Bacon Cheeseburger',15,'Served with French fries.','Kiyla’s Specialty Burgers','red'],
-['NEW Garlic Parm',16,'Garlic parmesan chicken cheese fries with bacon & green onions.','Kiyla’s Loaded Fries','green'],
-['Tender & Fries',11,'Chicken tenders served with French fries.','Sandwiches & wraps','yellow'],
-['BBQ Chicken Cheese Fries',16,'Chicken, shredded cheese, ranch, bacon & green onions with BBQ flavor.','Kiyla’s Loaded Fries','orange'],
-['Chicken Bacon Ranch Fries',16,'Chicken, bacon, ranch, cheese and fries.','Kiyla’s Loaded Fries','blue'],
-['Build Your Own Burger',14,'Served with French fries. Add toppings at no charge; bacon is extra.','Kiyla’s Specialty Burgers','cyan'],
-['Mac N Cheeseburger',15,'Cheeseburger topped with mac n cheese. Served with French fries.','Kiyla’s Specialty Burgers','yellow'],
-['Chopped Linguica',15,'Linguica, cheese, peppers, onions, egg, ketchup & hot sauce. Served with French fries.','Sandwiches & wraps','orange'],
-['Breakfast Burger',16,'Burger topped with bacon, cheese and a fried egg. Served with French fries.','Kiyla’s Specialty Burgers','green'],
-['Mozzarella Sticks',6,'Crispy mozzarella sticks.','Sides','white'],
-['Steak and cheese sub',7,'Steak and cheese sub.','Sandwiches & wraps','purple'],
-['Cheese Fries',6,'French fries topped with cheese.','Sides','yellow'],
-['Fruity pebble',7,'Fruity Pebble milkshake.','Milk Shakes','cyan'],
-['French Fries',6,'Classic French fries.','Sides','orange'],
-['Build Your Own Wrap',15,'Comes with French fries. Build it your way.','Sandwiches & wraps','green'],
-['Bacon Cheese Fries',10,'French fries loaded with bacon and cheese.','Sides','red'],
-['Cookies N Cream',6.5,'Cookies N Cream milkshake.','Milk Shakes','purple'],
-['Chili Cheese Fries',8,'French fries topped with chili and cheese.','Sides','red'],
-['Mac N Cheese',5,'Creamy mac n cheese.','Sides','yellow'],
-['Texas Burger',16,'Cheeseburger topped with BBQ sauce, bacon and crunchy onions. Served with French fries.','Kiyla’s Specialty Burgers','orange'],
-['Loaded cacoila fries',16,'Loaded fries with cacoila, shredded cheese, ketchup, mayo and potato stix.','Kiyla’s Loaded Fries','purple']
-],
-'Desert':[['Brownie',5,'Sweet dessert item.','Desert','orange']],
-'Milk Shakes':[['Coffee',6.5,'Rich and creamy coffee milkshake.','Milk Shakes','brown'],['Strawberry',6.5,'Rich and creamy strawberry milkshake.','Milk Shakes','red'],['Vanilla',6.5,'Creamy classic vanilla milkshake.','Milk Shakes','yellow'],['Chocolate',6.5,'Rich and creamy chocolate milkshake.','Milk Shakes','purple'],['Cookies N Cream',6.5,'Cookies N Cream milkshake.','Milk Shakes','purple'],['Fruity pebble',7,'Fruity Pebble milkshake.','Milk Shakes','cyan']],
-'Sandwiches & wraps':[['Build Your Own Wrap',15,'Chicken, lettuce, tomato, shredded cheese, onions & your choice of sauce. Served with French fries.','Sandwiches & wraps','green'],['Chopped Cheese',15,'Beef, cheese, mozzarella sticks, peppers, onions, lettuce, tomato, ketchup & mayo. Served with French fries.','Sandwiches & wraps','cyan'],['Chopped Linguica',15,'Linguica, cheese, peppers, onions, egg, ketchup & hot sauce. Served with French fries.','Sandwiches & wraps','orange'],['Steak and cheese sub',7,'Steak and cheese sub.','Sandwiches & wraps','purple']],
-'Kiyla’s Specialty Burgers':[['Mac N Cheeseburger',15,'Cheeseburger topped with mac n cheese. Served with French fries.','Kiyla’s Specialty Burgers','yellow'],['Bacon Cheeseburger',15,'Served with French fries.','Kiyla’s Specialty Burgers','red'],['Build Your Own Burger',14,'Served with French fries. Add toppings at no charge; bacon is extra.','Kiyla’s Specialty Burgers','cyan'],['Bacon Blue Burger',16,'Bacon and blue cheese crumble.','Kiyla’s Specialty Burgers','purple'],['Azorean Burger',15,'Cheese, ketchup, mustard, relish, onions, mayo, hot sauce and potato stix. Served with French fries.','Kiyla’s Specialty Burgers','green'],['Texas Burger',16,'Cheeseburger topped with BBQ sauce, bacon and crunchy onions. Served with French fries.','Kiyla’s Specialty Burgers','orange'],['Breakfast Burger',16,'Burger topped with bacon, cheese and a fried egg. Served with French fries.','Kiyla’s Specialty Burgers','yellow']],
-'Build Your Own Dogs':[['Vegan Dog',4,'Vegan dog with your choice of toppings.','Build Your Own Dogs','green'],['Linguica Dog',3.25,'Savory sausage served on a hot dog bun.','Build Your Own Dogs','orange'],['All Beef',2.5,'Beef hot dog with your choice of toppings.','Build Your Own Dogs','red'],['Grilled Dog',2.5,'Customizable hot dog with your choice of toppings.','Build Your Own Dogs','cyan'],['Steamed Dog',2,'Steamed hot dog.','Build Your Own Dogs','yellow']],
-'Kiyla’s Loaded Fries':[['Gold Fever Chicken Cheese Fries',16,'Comes loaded with shredded cheese, ranch, bacon & green onions.','Kiyla’s Loaded Fries','yellow'],['Buffalo Chicken Cheese Fries',16,'Comes loaded with shredded cheese, ranch, bacon & green onions.','Kiyla’s Loaded Fries','red'],['BBQ Chicken Cheese Fries',16,'Comes loaded with shredded cheese, ranch, bacon & green onions.','Kiyla’s Loaded Fries','orange'],['Sweet Chilli Chicken Cheese Fries',16,'Comes loaded with shredded cheese, ranch, bacon & green onions.','Kiyla’s Loaded Fries','orange'],['Loaded Cacoila Fries',16,'Shredded cheese, ketchup, mayo and potato stix.','Kiyla’s Loaded Fries','purple'],['Garlic Parmesan Chicken Cheese Fries',15,'Shredded cheese, garlic Parmesan sauce, bacon & green onions.','Kiyla’s Loaded Fries','green'],['Loaded Taco Fries',15,'Ground beef, shredded cheese, lettuce, tomato & sour cream.','Kiyla’s Loaded Fries','cyan']],
-'Kiyla’s Specialty Dogs':[['Chili & Cheese Dog',3,'Chili and cheese.','Kiyla’s Specialty Dogs','red'],['Linguica & Cheese Dog',3,'Shredded linguica and cheese.','Kiyla’s Specialty Dogs','orange'],['BLT Dog',4,'Bacon, lettuce and tomato.','Kiyla’s Specialty Dogs','green'],['Azorean Dog',3,'Relish, onions, ketchup, mustard, mayo, hot sauce and potato sticks.','Kiyla’s Specialty Dogs','cyan'],['New England Dog',3.5,'Baked beans and bacon.','Kiyla’s Specialty Dogs','yellow'],['Buffalo Dog',3,'Hot sauce and blue cheese crumble.','Kiyla’s Specialty Dogs','red'],['Bacon & Cheese Dog',3.5,'Bacon and cheese.','Kiyla’s Specialty Dogs','purple'],['Texas Dog',4,'BBQ sauce, bacon and crunchy onions.','Kiyla’s Specialty Dogs','orange'],['Coney Island Dog',3.5,'Coney Island sauce, mustard and onions.','Kiyla’s Specialty Dogs','cyan'],['Pizza Dog',3,'Pizza sauce and pizza cheese. Add-ons available.','Kiyla’s Specialty Dogs','red'],['Mac N Cheese Dog',3,'Topped with mac n cheese.','Kiyla’s Specialty Dogs','yellow'],['Doritos Dog',3,'Cheese and Doritos.','Kiyla’s Specialty Dogs','blue']],
-'Sides':[['French Fries',6,'Classic French fries.','Sides','orange'],['Onions Rings',6,'Crispy onion rings.','Sides','yellow'],['Chilli Cheese Fries',8,'French fries topped with chili and cheese.','Sides','red'],['Mac N Cheese',4,'Creamy mac n cheese.','Sides','yellow'],['Mozzarella Stiks',6,'Crispy mozzarella sticks.','Sides','white'],['Cheese Frie',7,'Cheese fries.','Sides','yellow'],['Bacon Cheese Frie',10,'Bacon cheese fries.','Sides','red']],
-'Drinks':[['Fountain Drink',3,'Cold fountain drink.','Drinks','cyan'],['Bottled Water',2,'Cold bottled water.','Drinks','blue']]
-};
-const categories=Object.keys(MENU);let activeCat='Most Ordered',cart=[],modalItem=null,modalSelections=[];
-const cats=document.getElementById('cats'),grid=document.getElementById('foodGrid');
-function money(n){return '$'+n.toFixed(2)}
-function renderCats(){cats.innerHTML=categories.map(c=>`<button class="${c===activeCat?'active':''}" onclick="setCat('${esc(c)}')">${c}</button>`).join('')}
-function setCat(c){activeCat=c;renderCats();renderMenu()}
-function esc(s){return s.replaceAll("'","\\'")}
-function renderMenu(){let q=document.getElementById('search').value.toLowerCase();let items=MENU[activeCat].filter(x=>(x[0]+' '+x[2]).toLowerCase().includes(q));grid.innerHTML=items.map((x,i)=>{let key=x[0].toLowerCase().includes('gold fever')?'#1 MOST LIKED':x[0].startsWith('NEW')?'NEW':'';return `<article class="food-card"><div class="food-img"><div class="art ${x[4]}" style="background:${x[4]==='white'?'#eee7d7':''}">${shortArt(x[0])}</div>${key?`<span class="tag">${key}</span>`:''}</div><div class="food-body"><div class="food-name">${x[0]}</div><div class="food-desc">${x[2]}</div><div class="food-bottom"><span class="price">${money(x[1])}</span><button class="add" onclick='openItem(${JSON.stringify(x)})'>ADD +</button></div></div></article>`}).join('')||'<div class="empty">Nothing found in this corner. Try another search.</div>'}
-function shortArt(n){if(n.toLowerCase().includes('fries'))return 'LOADED\nFRIES';if(n.toLowerCase().includes('burger'))return 'BURGER';if(n.toLowerCase().includes('dog'))return 'DOG';if(n.toLowerCase().includes('shake')||['Fruity pebble','Vanilla','Chocolate','Coffee','Strawberry','Cookies N Cream'].includes(n))return 'SHAKE';return 'GOOD\nSTUFF'}
-document.getElementById('search').addEventListener('input',renderMenu);
-function openItem(x){modalItem=x;modalSelections=[];document.getElementById('modalName').textContent=x[0];document.getElementById('modalDesc').textContent=x[2];document.getElementById('modalPrice').textContent=money(x[1]);document.getElementById('modalCategory').textContent=x[3];let mod='';if(x[3]==='Build Your Own Dogs'||x[0].includes('Build Your Own')){mod=`<h4>Make it yours</h4><div class="choices">${['Cheese','Sauerkraut','Potato Stix','Crunchy Onions','Hot Pepper Relish','Special Brown Mustard','Baked Beans','Hot Buffalo Sauce','Blue Cheese Crumble','Chili','Bacon','Linguica'].map(o=>`<button class="choice" onclick="toggleChoice(this)">${o}</button>`).join('')}</div>`}else if(x[3]==='Kiyla’s Loaded Fries'){mod=`<h4>Notes</h4><div class="choices"><button class="choice selected">As listed</button><button class="choice">No bacon</button><button class="choice">Extra sauce</button></div>`}else{mod=`<h4>Anything special?</h4><div class="choices"><button class="choice selected">As listed</button><button class="choice">No onions</button><button class="choice">No mayo</button></div>`}document.getElementById('modifiers').innerHTML=mod;document.getElementById('modal').classList.add('show')}
-function toggleChoice(b){b.classList.toggle('selected');if(b.classList.contains('selected'))modalSelections.push(b.textContent);else modalSelections=modalSelections.filter(x=>x!==b.textContent)}
-function closeModal(){document.getElementById('modal').classList.remove('show')}
-function addModalItem(){if(!modalItem)return;cart.push({name:modalItem[0],price:modalItem[1],mods:[...modalSelections]});closeModal();renderCart()}
-function addSimple(x){cart.push({name:x[0],price:x[1],mods:[]});renderCart()}
-function renderCart(){let el=document.getElementById('cartItems');if(!cart.length)el.innerHTML='<div class="empty">Your order is empty.<br>Go find something delicious.</div>';else el.innerHTML=cart.map((r,i)=>`<div class="cart-row"><div><strong>${r.name}</strong>${r.mods.length?`<small>${r.mods.join(', ')}</small>`:''}</div><div class="qty"><button onclick="changeQty(${i},-1)">−</button><strong>${money(r.price)}</strong><button onclick="changeQty(${i},1)">+</button></div></div>`).join('');let sub=cart.reduce((a,b)=>a+b.price,0);document.getElementById('subtotal').textContent=money(sub);document.getElementById('total').textContent=money(sub);document.getElementById('topCount').textContent=cart.length;document.getElementById('mobileCount').textContent=cart.length+' '+(cart.length===1?'item':'items');document.getElementById('mobileTotal').textContent=money(sub)}
-function changeQty(i,d){if(d<0)cart.splice(i,1);else cart.push({...cart[i]});renderCart()}
-function quickBuild(name){let found=null;for(const c of categories){found=MENU[c].find(x=>x[0]===name);if(found)break}if(found){openItem(found);document.getElementById('order').scrollIntoView({behavior:'smooth'})}}
-function openCartSheet(){if(cart.length){alert('Your cart is ready on the ordering panel. On mobile, continue checkout from the bottom order bar.')}else document.getElementById('order').scrollIntoView({behavior:'smooth'})}
-document.querySelectorAll('.mode button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.mode button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('cartMode').textContent=(b.dataset.mode==='pickup'?'Pickup':'Delivery')+' · New Bedford'}));
-document.getElementById('checkout').addEventListener('click',()=>window.open('https://order.online/store/kiyla-s-korner-cove-rd-31271415','_blank'));
-renderCats();renderMenu();renderCart();
-</script>
-</body></html>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Kiyla's Korner home">
+      <span class="brand-rock"><span>K</span></span>
+      <span class="brand-name">KIYLA'S KORNER</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#menu">Menu</a>
+      <a href="#story">The Korner</a>
+      <a href="#visit">Find Us</a>
+    </nav>
+    <button class="order-now" data-scroll-order>ORDER NOW</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-stone hero-stone-a"></div>
+      <div class="hero-stone hero-stone-b"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> NEW BEDFORD'S COLORFUL KORNER</div>
+        <h1 aria-label="Come hungry">
+          <span class="hero-line red">COME</span>
+          <span class="hero-line yellow">HUNGRY.</span>
+        </h1>
+        <p class="hero-sub">Loaded fries, specialty burgers, dogs, wraps, shakes and the kind of food that makes a regular Tuesday feel like a cookout.</p>
+        <div class="hero-actions">
+          <button class="big-cta" data-scroll-order>START AN ORDER <span>→</span></button>
+          <a class="ghost-cta" href="#menu">SEE THE MENU</a>
+        </div>
+        <div class="hero-address">
+          <strong>85 Osborne St</strong>
+          <span>New Bedford, MA</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-photo-frame">
+          <img src="assets/kiylas-korner-brand-reference.png" alt="Kiyla's Korner colorful outdoor seating area and sign" />
+          <span class="tape tape-a"></span>
+          <span class="tape tape-b"></span>
+        </div>
+        <div class="hero-food-card">
+          <img src="https://kiylas-korner.food-menu.net/media/2-kiylas-korner.jpg" alt="Kiyla's Korner food served in red and white baskets" />
+          <div class="hero-food-card-copy">
+            <span>ACTUAL KORNER FAVORITES</span>
+            <strong>Messy on purpose.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Kiyla's Korner specialties">
+      <div class="ticker-track">
+        <span>LOADED FRIES</span><i>★</i><span>BURGERS</span><i>★</i><span>DOGS</span><i>★</i><span>WRAPS</span><i>★</i><span>SHAKES</span><i>★</i>
+        <span>LOADED FRIES</span><i>★</i><span>BURGERS</span><i>★</i><span>DOGS</span><i>★</i><span>WRAPS</span><i>★</i><span>SHAKES</span><i>★</i>
+      </div>
+    </section>
+
+    <section class="order-shell" id="menu">
+      <div class="order-intro">
+        <div>
+          <span class="section-kicker">THE KORNER COUNTER</span>
+          <h2>Pick what looks good.</h2>
+        </div>
+        <div class="service-toggle" role="group" aria-label="Order type">
+          <button class="active" data-mode="pickup">PICKUP</button>
+          <button data-mode="delivery">DELIVERY</button>
+        </div>
+      </div>
+
+      <div class="order-app">
+        <aside class="category-rail" aria-label="Menu categories">
+          <div class="rail-title">MENU</div>
+          <div id="categoryButtons"></div>
+        </aside>
+
+        <section class="menu-panel">
+          <div class="menu-tools">
+            <div>
+              <span id="categoryLabel" class="section-kicker">MOST ORDERED</span>
+              <h3 id="categoryTitle">The crowd favorites.</h3>
+            </div>
+            <label class="search-box">
+              <span>⌕</span>
+              <input id="menuSearch" type="search" placeholder="Search the Korner..." />
+            </label>
+          </div>
+
+          <div id="popularStrip" class="popular-strip"></div>
+          <div id="foodGrid" class="food-grid"></div>
+        </section>
+
+        <aside class="cart-panel" aria-label="Cart">
+          <div class="cart-sticky">
+            <div class="cart-heading">
+              <div>
+                <span class="section-kicker">YOUR ORDER</span>
+                <h3>Good choices.</h3>
+              </div>
+              <span id="cartCountBubble" class="cart-count">0</span>
+            </div>
+            <div class="cart-mode" id="cartMode">Pickup · New Bedford</div>
+            <div id="cartItems" class="cart-items"></div>
+            <div class="cart-summary">
+              <div><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div>
+              <button id="checkoutButton" class="checkout-btn">CONTINUE TO ORDER <span>→</span></button>
+              <small>Final checkout opens Kiyla's current online ordering provider.</small>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="photo-break">
+      <div class="photo-break-copy">
+        <span class="section-kicker">FOOD TRUCK ENERGY</span>
+        <h2>Not polished.<br>Just fun.</h2>
+        <p>Bright chairs, music, outdoor seating, loud food, and a menu built for mixing it up.</p>
+      </div>
+      <div class="photo-mosaic">
+        <div class="mosaic-card tall"><img src="https://kiylas-korner.food-menu.net/media/3-kiylas-korner.jpg" alt="Kiyla's Korner food truck and colorful outdoor seating" /></div>
+        <div class="mosaic-card"><img src="https://kiylas-korner.food-menu.net/media/4-kiylas-korner.jpg" alt="Kiyla's Korner food and fries" /></div>
+        <div class="mosaic-card"><img src="https://kiylas-korner.food-menu.net/media/5-kiylas-korner.jpg" alt="Kiyla's Korner outdoor seating and hot dogs" /></div>
+      </div>
+    </section>
+
+    <section class="story" id="story">
+      <div class="story-rock">
+        <span>EST.</span>
+        <strong>2021</strong>
+      </div>
+      <div class="story-copy">
+        <span class="section-kicker">HOW THE KORNER STARTED</span>
+        <h2>Built by family.<br>Built in New Bedford.</h2>
+        <p>Kiyla's Korner opened in 2021 and grew from a family pivot during a difficult moment for local business. Today, the Korner is a neighborhood food-truck spot built around colorful energy, casual outdoor seating and comfort food that doesn't take itself too seriously.</p>
+      </div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div class="visit-copy">
+        <span class="section-kicker">MEET US AT THE KORNER</span>
+        <h2>Cove Road + Osborne Street.</h2>
+        <p>Outdoor seating, bright colors, good music and food worth getting messy for.</p>
+        <div class="visit-actions">
+          <a class="big-cta small" href="https://maps.apple.com/?q=Kiyla%27s%20Korner%2085%20Osborne%20St%20New%20Bedford%20MA" target="_blank" rel="noopener">GET DIRECTIONS</a>
+          <a class="ghost-cta" href="tel:+15088587456">CALL 508-858-7456</a>
+        </div>
+      </div>
+      <div class="visit-image">
+        <img src="https://kiylas-korner.food-menu.net/media/1-kiylas-korner.jpg" alt="Kiyla's Korner sign, menu and food truck exterior" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <span class="brand-rock"><span>K</span></span>
+      <div>
+        <strong>KIYLA'S KORNER</strong>
+        <span>New Bedford, Massachusetts</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="#visit">Find Us</a>
+      <a href="https://order.online/store/kiyla-s-korner-cove-rd-31271415" target="_blank" rel="noopener">Order Online</a>
+    </div>
+    <small>Menu availability and prices may change. Confirm final details at checkout.</small>
+  </footer>
+
+  <div class="mobile-cart-bar" id="mobileCartBar">
+    <div>
+      <strong id="mobileCartCount">0 items</strong>
+      <span id="mobileCartTotal">$0.00</span>
+    </div>
+    <button id="mobileCartButton">VIEW ORDER</button>
+  </div>
+
+  <dialog id="itemDialog" class="item-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Close">×</button>
+    <div class="dialog-media" id="dialogMedia"></div>
+    <div class="dialog-body">
+      <span class="section-kicker" id="dialogCategory"></span>
+      <h3 id="dialogName"></h3>
+      <p id="dialogDescription"></p>
+      <div id="dialogOptions" class="dialog-options"></div>
+      <div class="dialog-bottom">
+        <div>
+          <span>Price</span>
+          <strong id="dialogPrice"></strong>
+        </div>
+        <button id="dialogAdd">ADD TO ORDER</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
