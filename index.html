@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171717">
+  <meta name="description" content="Kiyla's Korner in New Bedford, MA — hot dogs, loaded fries, burgers, shakes and comfort food made for the neighborhood.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kiyla's Korner | New Bedford, MA">
+  <meta property="og:description" content="Hot dogs, loaded fries, burgers, shakes and more at Kiyla's Korner in New Bedford.">
+  <meta property="og:image" content="/assets/kiylas-korner-reference.png">
+  <meta property="og:locale" content="en_US">
+  <link rel="canonical" href="/">
+  <title>Kiyla's Korner | New Bedford, MA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Restaurant",
+    "name":"Kiyla's Korner",
+    "description":"Neighborhood food destination in New Bedford serving hot dogs, loaded fries, burgers, wraps, shakes and desserts.",
+    "image":"/assets/kiylas-korner-reference.png",
+    "servesCuisine":["American","Hot Dogs","Burgers"],
+    "address":{"@type":"PostalAddress","streetAddress":"85 Osborne Street","addressLocality":"New Bedford","addressRegion":"MA","postalCode":"02746","addressCountry":"US"},
+    "url":"/"
+  }
+  </script>
+</head>
+<body>
+  <div class="announcement"><span>NEW BEDFORD • SOUTH END</span><b>COME HUNGRY. MEET ME AT THE KORNER.</b><span>HOT DOGS • FRIES • SHAKES</span></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Kiyla's Korner home"><span class="brand-mark">K</span><span class="brand-name">KIYLA'S<br>KORNER</span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation"><a href="#menu">Menu</a><a href="#build">Build Your Dog</a><a href="#story">Our Story</a><a href="#find-us">Find Us</a></nav>
+    <button class="btn btn-primary header-order" data-open-order>ORDER NOW</button>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">☰</button>
+    <nav class="mobile-nav" id="mobileNav" hidden aria-label="Mobile navigation"><a href="#menu">Menu</a><a href="#build">Build Your Dog</a><a href="#story">Our Story</a><a href="#find-us">Find Us</a><a href="#" data-open-order>Order Now</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy">
+        <span class="eyebrow">NEW BEDFORD'S COLORFUL KORNER</span>
+        <h1>COME<br><span>HUNGRY.</span></h1>
+        <p>Hot dogs, loaded fries, burgers, shakes and the kind of comfort food that makes you want to come back tomorrow.</p>
+        <div class="hero-actions"><button class="btn btn-primary" data-open-order>ORDER NOW</button><a class="btn btn-outline" href="#menu">VIEW MENU</a></div>
+        <div class="hero-meta"><span><b>📍</b> Cove Road &amp; Osborne Street<br>New Bedford, MA</span><span><b>🌭</b> Built for<br>big appetites</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="scribble">MADE IN<br>NEW BEDFORD</div>
+        <div class="burst burst-a">LOAD<br>IT UP!</div>
+        <div class="photo-frame"><img src="/assets/kiylas-korner-reference.png" alt="Kiyla's Korner colorful sign and outdoor seating in New Bedford"></div>
+        <div class="burst burst-b">YOUR<br>KORNER</div>
+        <div class="food-sticker">GOOD<br>FOOD<br>GOOD<br>PEOPLE</div>
+      </div>
+    </section>
+
+    <section class="quick-order">
+      <div><span>01</span><b>CHOOSE</b><small>Pick your favorites</small></div>
+      <div><span>02</span><b>LOAD IT</b><small>Make it your way</small></div>
+      <div><span>03</span><b>GET IT</b><small>Pickup or delivery</small></div>
+      <button class="btn btn-dark" data-open-order>START AN ORDER →</button>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="section-head"><div><span class="eyebrow">THE GOOD STUFF</span><h2>KORNER<br><i>FAVORITES.</i></h2></div><p>Start with the stuff people come back for. Then get weird with it.</p></div>
+      <div class="filter-bar" role="tablist" aria-label="Menu categories">
+        <button class="filter active" data-filter="featured">Most Loved</button><button class="filter" data-filter="dogs">Dogs</button><button class="filter" data-filter="burgers">Burgers</button><button class="filter" data-filter="fries">Loaded Fries</button><button class="filter" data-filter="wraps">Wraps</button><button class="filter" data-filter="sides">Sides</button><button class="filter" data-filter="shakes">Shakes</button><button class="filter" data-filter="desserts">Sweets</button>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <section class="builder section" id="build">
+      <div class="builder-visual"><div class="builder-note">NO WRONG ANSWERS.</div><div class="dog-plate"><div class="fries-lines"></div><div class="bun"></div><div class="hotdog"></div><span class="topping-float t1">CHEESE</span><span class="topping-float t2">BACON</span><span class="topping-float t3">RELISH</span></div></div>
+      <div class="builder-copy"><span class="eyebrow">THE KORNER CLASSIC</span><h2>YOUR DOG.<br><i>YOUR WAY.</i></h2><p>Pick your dog. Pick your toppings. Make it exactly how you want it.</p><div class="choice-grid" id="dogChoices"></div><button class="btn btn-primary full" id="builderNext">BUILD THIS DOG →</button></div>
+    </section>
+
+    <section class="loaded section">
+      <div class="loaded-title"><span class="eyebrow">BIG. MESSY. GOOD.</span><h2>LOADED<br><i>MEANS LOADED.</i></h2><p>Fries are just the beginning. These are built to be the main event.</p><button class="btn btn-dark" data-filter-jump="fries">SEE ALL LOADED FRIES →</button></div>
+      <div class="fries-showcase"><article class="fries-card large"><div class="fries-photo"><span>01</span><b>GOLD FEVER</b><div>🍟</div></div><h3>Gold Fever Chicken Cheese Fries</h3><p>Chicken, cheese and all the good stuff.</p></article><article class="fries-card"><div class="fries-photo alt"><span>02</span><b>BUFFALO</b><div>🍟</div></div><h3>Buffalo Chicken Cheese Fries</h3><p>Chicken, cheese, ranch, bacon &amp; buffalo heat.</p></article><article class="fries-card"><div class="fries-photo alt2"><span>03</span><b>SWEET CHILI</b><div>🍟</div></div><h3>Sweet Chili Chicken Cheese Fries</h3><p>Sweet, spicy and seriously loaded.</p></article></div>
+    </section>
+
+    <section class="split-feature"><div class="burger-panel"><span class="eyebrow">BURGER TIME</span><h2>STACK IT<br><i>HIGH.</i></h2><p>From the Bacon Cheeseburger to the Azorean and Mac N Cheese Burger, there is no small appetite here.</p><button class="btn btn-light" data-filter-jump="burgers">SEE BURGERS →</button><div class="burger-illustration">🍔</div></div><div class="shake-panel"><span class="eyebrow">SOMETHING SWEET</span><h2>SHAKE<br><i>THINGS UP.</i></h2><p>Fruity Pebble, Cookies N Cream, Chocolate, Vanilla and more.</p><button class="btn btn-light" data-filter-jump="shakes">SEE SHAKES →</button><div class="shake-row"><span class="shake-cup yellow">🥤</span><span class="shake-cup pink">🥤</span><span class="shake-cup purple">🥤</span><span class="shake-cup blue">🥤</span></div></div></section>
+
+    <section class="experience section"><div class="experience-image"><img src="/assets/kiylas-korner-reference.png" alt="Outdoor Kiyla's Korner seating area and sign"></div><div class="experience-copy"><span class="eyebrow">MEET ME AT THE KORNER</span><h2>MORE THAN<br><i>A MEAL.</i></h2><p>Pull up a turquoise chair, bring your people and make a stop at one of New Bedford's colorful neighborhood food spots.</p><div class="location-card" id="find-us"><span class="pin">📍</span><div><b>85 Osborne Street</b><small>New Bedford, Massachusetts</small></div><a href="https://www.google.com/maps/search/?api=1&query=85+Osborne+Street+New+Bedford+MA" target="_blank" rel="noopener">GET DIRECTIONS ↗</a></div><a class="phone-link" href="tel:+15089992115">(508) 999-2115</a></div></section>
+
+    <section class="story section" id="story"><div class="story-number">2021</div><div class="story-copy"><span class="eyebrow">HOW THE KORNER STARTED</span><h2>BUILT BY FAMILY.<br><i>BUILT IN NEW BEDFORD.</i></h2><p>Kiyla's Korner opened in January 2021, during one of the hardest stretches of the pandemic. When David Bizarro's transportation business lost most of its business, the family turned a difficult moment into a new opportunity — a place built around food, family and bringing people together.</p><div class="story-stamp">NEW<br>BEDFORD<br>MADE</div></div></section>
+
+    <section class="love section"><div class="love-head"><span class="eyebrow">KORNER LOVE</span><h2>GOOD PEOPLE.<br><i>GOOD FOOD.</i></h2></div><div class="quote-grid"><blockquote>“A fun spot for comfort food and a good hang.”<cite>LOCAL KORNER LOVE</cite></blockquote><blockquote>“The loaded fries are the kind of thing you talk about later.”<cite>LOCAL KORNER LOVE</cite></blockquote><blockquote>“Colorful, casual, family-friendly and full of personality.”<cite>LOCAL KORNER LOVE</cite></blockquote></div></section>
+
+    <section class="faq section"><div><span class="eyebrow">QUICK ANSWERS</span><h2>THE<br><i>411.</i></h2></div><div class="faq-list"><details open><summary>What is Kiyla's Korner?<span>+</span></summary><p>Kiyla's Korner is a New Bedford neighborhood food destination known for hot dogs, loaded fries, burgers, wraps, shakes and casual outdoor seating.</p></details><details><summary>Where is Kiyla's Korner?<span>+</span></summary><p>The restaurant is listed at 85 Osborne Street in New Bedford, Massachusetts, around the Cove Road / Osborne Street area.</p></details><details><summary>What should I try first?<span>+</span></summary><p>Start with one of the Korner favorites — a specialty dog, loaded fries, a burger or a shake — then come back and build your own.</p></details><details><summary>Can I order online?<span>+</span></summary><p>Yes. Use the Order Now button to continue to Kiyla's current online ordering service for live availability, pricing and checkout.</p></details></div></section>
+
+    <section class="final-cta"><div class="giant-letters"><span>MEET</span> THE<br><b>KORNER.</b></div><div><p>Come hungry. Leave happy.</p><button class="btn btn-dark" data-open-order>ORDER ONLINE →</button></div></section>
+  </main>
+
+  <footer class="footer"><div class="footer-brand"><span class="brand-mark">K</span><div><b>KIYLA'S KORNER</b><small>New Bedford, MA</small></div></div><div class="footer-links"><a href="#menu">Menu</a><a href="#build">Build Your Dog</a><a href="#story">Our Story</a><a href="#find-us">Find Us</a><a href="#" data-open-order>Order Online</a></div><div class="footer-bottom"><span>© 2026 Kiyla's Korner. Built for the neighborhood.</span><a href="https://order.online/store/kiyla-s-korner-cove-rd-31271415" target="_blank" rel="noopener">CURRENT ONLINE ORDERING ↗</a></div></footer>
+
+  <div class="order-overlay" id="orderOverlay" aria-hidden="true"><aside class="order-drawer" role="dialog" aria-modal="true" aria-labelledby="orderTitle"><div class="order-top"><div><span class="eyebrow">YOUR KORNER ORDER</span><h2 id="orderTitle">ORDER UP.</h2></div><button class="close-order" aria-label="Close order">×</button></div><div class="order-type"><button class="active" data-order-type>PICKUP</button><button data-order-type>DELIVERY</button></div><div class="order-note"><span>✓</span><div><b>Live menu &amp; checkout</b><small>Continue to Kiyla's current ordering service for final availability, fees and payment.</small></div></div><div id="emptyCart" class="empty-cart">Your order is empty.<br><small>Add something delicious from the menu.</small></div><div class="cart-list" id="cartList"></div><div class="cart-total"><div><span>Subtotal</span><b id="cartTotal">$0.00</b></div><small>Taxes, fees and final checkout totals are calculated by the live ordering service.</small></div><button class="btn btn-primary full" id="checkoutBtn">CONTINUE TO CHECKOUT →</button><a class="external-order" href="https://order.online/store/kiyla-s-korner-cove-rd-31271415" target="_blank" rel="noopener">Open live Kiyla's ordering page</a></aside></div>
+  <div class="item-overlay" id="itemOverlay" aria-hidden="true"><div class="item-modal" role="dialog" aria-modal="true" aria-label="Customize item"><button class="close-item" aria-label="Close item">×</button><div id="itemModalContent"></div></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
