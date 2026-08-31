@@ -1,28 +1,23 @@
-# Kiyla's Korner — 43 Build
+# Kiyla's Korner — 43 Build v2
 
-Production-ready, dependency-light restaurant website prototype with a custom Kiyla's Korner visual system and functional front-end ordering/cart experience.
+A complete dark-first, mobile-first restaurant experience designed from the supplied Kiyla's Korner brand reference. This version intentionally takes a new visual/UX direction rather than reskinning No Problemo.
 
-## Included
-- Mobile-first responsive site
-- Kiyla's Korner visual direction based on supplied reference image
-- Menu browsing and category filtering
-- Item customization modal
-- Build-a-dog flow
-- Cart with quantities and modifiers
-- Pickup/delivery selector
-- Checkout handoff to the current online ordering destination
-- About/story, location, review, FAQ and local content
-- SEO/AEO/GEO metadata and Restaurant/FoodEstablishment schema
-- Accessibility basics and reduced-motion support
-- No package-lock.json
+## Structure
+- `index.html` — site markup, SEO/AEO metadata, Restaurant JSON-LD
+- `styles.css` — responsive dark visual system
+- `app.js` — menu filtering, search, builder, ordering panel interactions
+- `assets/kiylas-korner-reference.png` — supplied brand photo
+- `assets/kiylas-sign.png` — cropped brand photo for hero
+- `robots.txt`
+- `sitemap.xml`
 
-## Important production integration note
-The cart and checkout UX is implemented client-side. Before taking live payments/orders, connect the cart/checkout to the restaurant's authorized ordering/payment provider or merchant API. The current external-order CTA points to the restaurant's active online ordering listing.
+## Deployment
+Static site. No build command or dependency installation is required. The files are intended to sit at the repository root for Vercel.
 
-## Sources used for initial content
-- Current online ordering menu: https://order.online/store/kiyla-s-korner-cove-rd-31271415
-- Grubhub menu: https://www.grubhub.com/restaurant/kiylas-korner-85-osborne-st-new-bedford/9142368
-- Explore New Bedford: https://explorenewbedford.org/listings/american-cuisine-diners/kiylas-korner/
-- Fun 107 origin story: https://fun107.com/new-bedford-new-hot-dog-stand/
+No `package-lock.json` is included.
 
-Menu prices and availability can vary between ordering platforms and in-store service. Verify merchant data before launch.
+## Ordering
+The site provides a native-feeling menu/order interface and a live-order handoff to the restaurant's current DoorDash-powered ordering page. Payment processing is not falsely represented as connected.
+
+## Source notes
+Menu names/prices and current ordering/location information were cross-checked against the restaurant's current Order Online and Grubhub listings. Some platform pricing/availability can vary; the live ordering platform remains the source of truth.
