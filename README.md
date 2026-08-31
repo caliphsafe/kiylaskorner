@@ -1,11 +1,12 @@
-# Kiyla's Korner — 43 Build V3
+# Kiyla's Korner — 43 Build V4
 
-Dark, ordering-first restaurant experience for Kiyla's Korner, New Bedford.
+Dark-first, Flintstones-inspired neighborhood food-truck ordering experience.
+
+## Run
+Open `index.html` or deploy the folder as a static site. No build step and no package-lock.json.
 
 ## Notes
-- No package-lock.json.
-- Static deployment: index.html at repository root.
-- Menu/pricing was cross-checked against the current Kiyla's Korner online ordering page and Grubhub listing.
-- Checkout currently hands off to the live online ordering platform; no payment integration is falsely represented as live.
-- The supplied Kiyla's Korner brand/reference photography is included in `assets/`.
-- Food cards use image-forward presentation with remote food photography fallbacks because the ordering platform exposes its individual CDN image assets through its rendered application rather than stable public image URLs in the accessible page data. Replace the `IMG` map in `app.js` with the merchant-authorized CDN URLs when available for production.
+- Menu categories and current item names/prices are structured from the current online ordering source.
+- Checkout hands off to the restaurant's current DoorDash/Order Online page.
+- `assets/kiylas-korner-reference.png` and `assets/kiylas-sign.png` are the supplied brand references.
+- The source ordering platform does not expose stable menu-item photo URLs through the accessible page content, so this build does not falsely package third-party images as if they were official food assets. Replace the visual card art with merchant-authorized food photos when those assets are available.
