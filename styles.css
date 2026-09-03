@@ -11,3 +11,102 @@
 .hero-photo .hero-space-image{object-position:right center}
 .footer-logo{display:block;width:180px;max-height:70px;object-fit:contain;object-position:left center}
 @media(max-width:800px){.site-logo{width:145px;max-height:48px}.footer-logo{width:160px}}
+
+/* Mobile cart button + continuous menu marquee */
+html,body{max-width:100%;overflow-x:hidden}
+.marquee{position:relative;overflow:hidden}
+.marquee-track{display:flex;width:max-content;will-change:transform;animation:kornerMarquee 24s linear infinite}
+.marquee-track span{display:block;flex:none;white-space:nowrap;padding:13px 0;font:900 23px/1 "Archivo Black";color:#111}
+@keyframes kornerMarquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+
+@media(max-width:1120px){
+  .mobile-cart{
+    display:flex;
+    position:fixed;
+    z-index:110;
+    left:auto;
+    right:max(12px,env(safe-area-inset-right));
+    bottom:max(12px,env(safe-area-inset-bottom));
+    width:auto;
+    min-width:154px;
+    max-width:calc(100vw - 24px);
+    border:2px solid #08090a;
+    background:var(--cream);
+    color:#111;
+    border-radius:999px;
+    padding:9px 11px 9px 14px;
+    align-items:center;
+    justify-content:space-between;
+    gap:11px;
+    box-shadow:6px 7px 0 #08090a,0 14px 40px rgba(0,0,0,.35);
+    cursor:pointer;
+  }
+  .mobile-cart-copy{display:flex;flex-direction:column;align-items:flex-start;gap:0;line-height:1.05}
+  .mobile-cart-copy strong{font-size:12px;font-weight:1000}
+  .mobile-cart-copy #mobileTotal{font-size:11px;font-weight:900;color:#5d5a54;margin-top:3px}
+  .mobile-cart-label{display:grid;place-items:center;min-height:36px;padding:0 11px;background:#111;color:#fff;border-radius:999px;font-size:10px;font-weight:1000;white-space:nowrap}
+}
+
+@media(max-width:800px){
+  .marquee-track{animation-duration:18s}
+  .marquee-track span{font-size:18px;padding:11px 0}
+  .hero{width:100%;padding-inline:clamp(14px,4vw,22px)}
+  .hero h1{font-size:clamp(54px,20vw,92px);line-height:.82;letter-spacing:clamp(-4px,-.7vw,-2px)}
+  .hero p{font-size:16px}
+  .hero-photo{width:100%;min-height:auto}
+  .hero-photo img{height:clamp(340px,105vw,500px);max-height:72vh}
+  .menu-shell{width:100%;padding-inline:clamp(9px,3vw,15px)}
+  .menu-heading h2{font-size:clamp(36px,11vw,50px)}
+  .menu-layout{width:100%;min-width:0}
+  .menu-list-panel{min-width:0}
+  #categoryButtons{max-width:100%;overscroll-behavior-inline:contain}
+  .space-section,.story-band,.visit{width:100%}
+  .space-copy h2,.story-band h2,.visit h2{font-size:clamp(40px,13vw,64px);letter-spacing:-2px}
+  .space-photo,.space-photo img{min-height:clamp(310px,105vw,450px)}
+  .visit>div:first-child{padding:clamp(24px,7vw,42px)}
+  dialog{width:min(620px,calc(100vw - 18px));max-height:calc(100dvh - 18px);overflow:auto}
+  .dialog-content{padding:26px 18px 20px}
+}
+
+@media(max-width:520px){
+  .topbar{padding-inline:10px}
+  .site-logo{width:min(140px,38vw)}
+  .header-order{padding:9px 11px;font-size:11px}
+  .hero{padding-top:30px}
+  .hero h1{font-size:clamp(50px,19vw,78px)}
+  .c-yellow{margin-left:3vw}
+  .hero-actions{gap:8px}
+  .hero-actions .primary,.hero-actions .secondary{padding:11px 13px;font-size:12px}
+  .menu-heading{gap:14px}
+  .mode-toggle{width:100%}
+  .mode-toggle button{flex:1;padding-inline:10px}
+  .menu-toolbar h3{font-size:clamp(24px,8vw,30px)}
+  .menu-item{grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start}
+  .menu-item-side{flex-direction:column;align-items:flex-end;gap:8px}
+  .menu-item h4{font-size:16px}
+  .price{font-size:16px}
+  .add-button{padding:8px 9px;font-size:11px}
+  .space-photo,.space-photo img{min-height:clamp(280px,96vw,390px)}
+  .visit-sign{height:clamp(300px,95vw,390px)}
+  footer{padding-bottom:86px}
+  .mobile-cart{right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));min-width:146px;padding:8px 9px 8px 12px;gap:8px;box-shadow:4px 5px 0 #08090a,0 12px 28px rgba(0,0,0,.32)}
+  .mobile-cart-label{min-height:34px;padding-inline:10px}
+}
+
+@media(max-width:360px){
+  .topbar{height:62px}
+  .site-logo{width:118px}
+  .header-order{font-size:10px;padding:8px 9px}
+  .hero{padding-inline:12px}
+  .hero h1{font-size:clamp(46px,18.5vw,66px);letter-spacing:-2px}
+  .hero p{font-size:15px}
+  .menu-shell{padding-inline:7px}
+  .menu-list-panel{padding:12px}
+  .menu-item{grid-template-columns:1fr}
+  .menu-item-side{flex-direction:row;align-items:center;justify-content:space-between}
+  .mobile-cart{min-width:138px}
+  .mobile-cart-copy strong{font-size:11px}
+  .mobile-cart-label{font-size:9px;padding-inline:9px}
+}
+
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}

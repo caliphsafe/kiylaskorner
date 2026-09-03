@@ -44,7 +44,10 @@
   </section>
 
   <section class="marquee" aria-hidden="true">
-    <div>LOADED FRIES ★ BURGERS ★ DOGS ★ WRAPS ★ SHAKES ★ SIDES ★ LOADED FRIES ★ BURGERS ★ DOGS ★ WRAPS ★</div>
+    <div class="marquee-track">
+      <span>LOADED FRIES ★ BURGERS ★ DOGS ★ WRAPS ★ SHAKES ★ SIDES ★&nbsp;</span>
+      <span>LOADED FRIES ★ BURGERS ★ DOGS ★ WRAPS ★ SHAKES ★ SIDES ★&nbsp;</span>
+    </div>
   </section>
 
   <section id="menu" class="menu-shell">
@@ -152,10 +155,13 @@
   </div>
 </footer>
 
-<div class="mobile-cart">
-  <div><strong id="mobileCount">0 items</strong><span id="mobileTotal">$0.00</span></div>
-  <button id="mobileCheckout">CHECKOUT</button>
-</div>
+<button class="mobile-cart" id="mobileCheckout" type="button" aria-label="Open Kiyla's Korner checkout">
+  <span class="mobile-cart-copy">
+    <strong id="mobileCount">0 items</strong>
+    <span id="mobileTotal">$0.00</span>
+  </span>
+  <span class="mobile-cart-label">CART →</span>
+</button>
 
 <dialog id="itemDialog">
   <button class="dialog-close" id="closeDialog">×</button>
